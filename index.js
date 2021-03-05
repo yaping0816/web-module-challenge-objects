@@ -219,10 +219,32 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(odometer) {
+  let car={
+    odometer:odometer,
+   drive: function(distance){
+    this.odometer+=distance;
+    return this.odometer;
+  }
+  };
+
+ return car; 
 }
+console.log(carMaker(10).drive(100));
+
+
+// const car1{
+//   drive: function(distance){
+//     let updatedOdometer= odometer+distance;
+//     return updatedOdometer; 
+//   }
+
+
+
+
+
+
+
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
