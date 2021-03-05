@@ -189,7 +189,7 @@ Use the getLongReviews function below to do the following:
 function getLongReviews(array) {
   let newArray=[];
   for(let i=0; i<array.length;i++){
-    console.log('array[i] from borken func:::: ', array[i])
+    
     let stringtoArray=array[i].feedback.split(' ');
     if(stringtoArray.length>15){
       newArray.push(array[i])
