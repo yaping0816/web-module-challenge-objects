@@ -3,8 +3,8 @@
 /*When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.*/
 
 ///////////////Menu Items (MVP)///////////////////
-const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
-const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
+// const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
+// const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1a: Make a function that builds objects🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Add to the function createMenuItems below so it will create objects following the same format found above for latte and breakfastBurrito (name, price, category).  
@@ -100,7 +100,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
-reviews[7]="this place is chill with really cool people, great for getting work done on weekdays";
+reviews[7].feedback="this place is chill with really cool people, great for getting work done on weekdays";
 console.log(reviews);
 
 
@@ -188,14 +188,15 @@ Use the getLongReviews function below to do the following:
 
 function getLongReviews(array) {
   let newArray=[];
-for(let i=0; i<array.length;i++){
-  let stringtoArray=array[i].feedback.split(' ');
-  if(stringtoArray.length>15){
-    newArray.push(array[i])
+  for(let i=0; i<array.length;i++){
+    console.log('array[i] from borken func:::: ', array[i])
+    let stringtoArray=array[i].feedback.split(' ');
+    if(stringtoArray.length>15){
+      newArray.push(array[i])
+    }
   }
-}
 
-return newArray;
+  return newArray;
 }
 
 console.log(getLongReviews(reviews));
